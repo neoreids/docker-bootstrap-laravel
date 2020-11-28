@@ -18,6 +18,7 @@ services:
       container_name: $APP_NAME-mysql
       volumes:
         - .:/application
+        - ./docker/db/data:/var/lib/mysql
       environment:
         - MYSQL_ROOT_PASSWORD=nortaleroot
         - MYSQL_DATABASE=$DB_DATABASE
